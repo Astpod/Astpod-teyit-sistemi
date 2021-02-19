@@ -24,6 +24,19 @@ const ayar = {
   
 };
 
+const sayı = { //sayı emojilerin idleri
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+}
+
 
 client.on("message", async (message) => {
   if (message.channel.type === "dm") return;
@@ -174,6 +187,26 @@ client.embed = (message, msj) => {
     };
   };
 
+  Object.defineProperty(Array.prototype, "flat", {
+     value: (depth = 1) => {
+       return Array.prototype.reduce((flat, toFlatten) => {
+         return flat.concat(Array.isArray(toFlatten) && depth > 1 ? toFlatten.flat(depth - 1) : toFlatten);
+       }, []);
+     }
+  });
+  
+  client.emojili = (string) => {
+    let str = "";
+    String(string).split("").forEach(x => {
+      str += "" + sayı.sayilar[Number(x)];
+    });
+    return str;
+  };
+  
+  client.sayilariCevir = function(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+  
 
 process.on("uncaughtExpection", function (err) {
 if (err) console.error(err);
