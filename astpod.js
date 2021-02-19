@@ -34,7 +34,7 @@ const sayı = { //sayı emojilerin idleri
   "",
   "",
   "",
-  "",
+  ""
 }
 
 
