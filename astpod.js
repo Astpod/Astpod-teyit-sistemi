@@ -214,3 +214,5 @@ if (err) console.error(err);
 
 
 client.login(ayar.token);
+
+//HOŞ GELDİN MESAJINI SİZE BIRAKTIM İSTEDİĞİNİZ GİBİ AYARLIYABİLİRSİNİZ.
