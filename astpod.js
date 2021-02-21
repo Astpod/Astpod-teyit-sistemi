@@ -24,7 +24,7 @@ const ayar = {
   
 };
 
-const sayı = { //sayı emojilerin idleri
+const sayı = [ //sayı emojilerin idleri
   "",
   "",
   "",
@@ -35,7 +35,7 @@ const sayı = { //sayı emojilerin idleri
   "",
   "",
   ""
-}
+]
 
 
 client.on("message", async (message) => {
